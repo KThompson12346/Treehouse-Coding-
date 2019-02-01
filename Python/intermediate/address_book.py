@@ -77,8 +77,7 @@ print("-------------------------------------------------------------------------
 #     ^(?P<lastname>[-\w\s]+,)
 #     (?P<firstname>[-\w\s])$
 # ''', data, re.M)
-names = re.search(r'''
-    ^(?P<lastname>[-\w\s]+,)
-    (?P<firstname>[-\w\s])$
-''', data.groups())
-# print(names.groups())
+names = re.match(r'''
+    ^(?P<fullname>[-\w ]+,\s[-\w ]+)$
+''', data, re.X|re.M)
+print(names)
