@@ -78,6 +78,6 @@ print("-------------------------------------------------------------------------
 #     (?P<firstname>[-\w\s])$
 # ''', data, re.M)
 names = re.match(r'''
-    ^(?P<fullname>[-\w ]+,\s[-\w ]+)$
+    (?P<fullname>[-\w ]+,\s[-\w ]+)
 ''', data, re.X|re.M)
 print(names)
