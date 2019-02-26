@@ -1,5 +1,6 @@
-# del keyword deletes the label not the object
-# pop method removes the value/object in the list
+# remove method removes the first matching value from the list
+# del in a list removes the item at the specified index, keyword deletes the label not the object,
+# pop method removes the value/object in the list at the specified index and returns it 
 # do not modify a list when looping through the list it gives unexpected results. Copy a list to remove/modify from a list properly
 books = [
     "Learning Python: Powerful Object-Oriented Programming - Mark Lutz",
@@ -18,7 +19,7 @@ video_games = [
 
 print("suggested gift: {}".format(books[0]))
 
-# for in loops where I want to iterate through a list 
+# for in loops where I want to iterate through a list
 print("books:")
 for book in books:
     print("* " + book)
