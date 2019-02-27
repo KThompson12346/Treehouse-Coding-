@@ -20,26 +20,8 @@ del Kirome["editor"]
 # Lowercase the string to make it easier.
 def word_count(a_string):
     a_string = a_string.lower() # turns the string into all lowercase
-    words = a_string.split() # splits all the words up into a list according to where the whitespaces
+    words = a_string.split() # splits all the words up into a list according to where the whitespaces are
     my_dict = {} # creates a new dictionary that is empty
     for word in words: # for loop that loops through each word in the string words
         my_dict[word] = words.count(word) # each word in the string is then put into a key in the dictionary with my_dict[word] and then the word count for each word is placed inside each keys value words.count(word)
     return my_dict # and now the dictionary is returned
-
-
-# The dictionary will look something like:
-# {'Andrew Chalkley': ['jQuery Basics', 'Node.js Basics'],
-#  'Kenneth Love': ['Python Basics', 'Python Collections']}
-#
-# Each key will be a Teacher and the value will be a list of courses.
-#
-# Your code goes below here.
-
-def num_teachers(dict):
-    return len(dict) # returns the number of keys in the dictionary
-
-def num_courses(dict):
-    course_count = 0 # used as an increment value to count the number of courses
-    for course in dict.values(): # for loop to count each course
-        course_count += len(course) # course count is increment to the number of each course
-    return course_count # course_count is returned 
