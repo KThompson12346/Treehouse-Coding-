@@ -1,3 +1,5 @@
+# my_list.append() will add a list to the list
+# my_list.extend() will extend a list
 
 # The dictionary will look something like:
 # {'Andrew Chalkley': ['jQuery Basics', 'Node.js Basics'],
@@ -24,21 +26,35 @@ def courses(dict):
     return course_list # list of courses is returned
 
 
-
-# def most_courses(dict):
-#     course_count = 0
-#     name = ''
-#     for course in dict.values():
-#         if len(course) > course_count:
-#             course_count = len(course)
-#     return course_count
-
+def most_courses(dict):
+    course_count = 0
+    name = ''
+    for course in dict.values():
+        if len(course) > course_count:
+            course_count = len(course)
+    return course_count # returns the highest number of courses
 
 def most_courses(dict):
-    course_count = 0 # used to count the number 
+    course_count = 0 # used to count the number
     name = ''
     for teacher, course in dict.items():
         if len(course) > course_count:
             course_count = len(course)
             name = teacher
-    return name
+    return name # returns the name of the teacher with the highest number of courses
+
+
+courses = {'Andrew Chalkley': ['jQuery Basics', 'Node.js Basics'],
+  'Kenneth Love': ['Python Basics', 'Python Collections'], 'Kirome': ['Java', 'Javascript', 'Pascal', 'html', 'Python']}
+def stats(dict):
+    my_lists = []
+    temp_list = []
+    course_count = 0
+    name = ''
+    for teacher, course in dict.items():
+        course_count = len(course)
+        name = teacher
+        temp_list = [name, course_count]
+        my_lists.append(temp_list)
+    return my_lists
+stats(courses)

@@ -1,11 +1,11 @@
-# made up of key and value
+made up of key and value
 # are mutable i.e. can change as you want them to dynamically
 # syntax {"key": "value"}
 # will throw a 'runtime' error if accessing a key that doesn't exist
 course = {"Title": "Python Collections", "Teacher": "Kenneth Love", "Videos": 22}
 
 player = {"name": "Rex", "remaining_lives": 3, "levels": [1, 2, 3, 4],
-          "items": {"Weapons": ["sword", "bow and arrow"], "Potions": ["health", "stamina"]}}
+          "items": {"Weapons": ["sword", "bow"], "Potions": ["health", "stamina"]}}
 
 Kirome = {"first_name": "Kirome", "Job": "None"}
 Kirome["last_name"] = "Thompson"
@@ -13,7 +13,6 @@ Kirome.update({"Job": "Python Teacher", "editor": "Vim"}) # update method allows
 Kirome["editor"] = "any"
 Kirome["brothers"] = 2
 del Kirome["editor"]
-
 
 # E.g. word_count("I do not like it Sam I Am") gets back a dictionary like:
 # {'i': 2, 'do': 1, 'it': 1, 'sam': 1, 'like': 1, 'not': 1, 'am': 1}

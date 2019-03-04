@@ -39,6 +39,19 @@ def stringcases(a_string):
 
 print(stringcases('Kirome nahum Thompson'))
 
-
+# method takes two iterables and makes a list of tuples using a combination of the corresponding indecies from each iterable
 def combo(iterable_a, iterable_b):
-    
+    list_a = list(iterable_a)
+    list_b = list(iterable_b)
+    index = 0
+    a_tuple = ()
+    tuple_list = []
+    for value_a in iterable_a:
+        temp_a = list_a[index]
+        temp_b = list_b[index]
+        a_tuple = tuple([temp_a, temp_b])
+        tuple_list.append(a_tuple)
+        index += 1
+    return tuple_list
+
+combo('123', 'abc')
