@@ -34,11 +34,20 @@ class Letter:
         for char in self.pattern:
             if char == '.':
                 string.append('dot')
-            if char == '_':
+            elif char == '_':
                 string.append('dash')
         return '-'.join(string)
 
-a_string = ['.', '.', '.', '_', '_']
-print(a_string)
-a = Letter(['.', '.', '.', '_', '_'])
-print(a.__str__)
+        def __iter__(self):
+            yield from self.pattern
+
+        @classmethod
+        def from_string(cls, a_string):
+            split_string = a_string.split('-')
+            string = []
+            for char in split_string:
+                if char == 'dash':
+                    string.append('_')
+                elif char == 'dot':
+                    string.append('.')
+            return cls(string)

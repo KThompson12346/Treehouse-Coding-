@@ -33,3 +33,4 @@ class NumString:
 
     def __imul__(self, other):
         self.value = self * other
+        return self.value
