@@ -1,4 +1,5 @@
-# .localize() is used to convert a naive datetime to an aware one 
+# .localize() is used to convert a naive datetime to an aware one
+# .today() and .now() both give back same values by default
 from datetime import datetime
 import pytz
 
