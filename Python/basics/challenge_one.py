@@ -15,6 +15,7 @@ elif is_buzz:
     print("is a Buzz number.")
 else:
     print("is neither a fizzy or a buzzy number.")
+    print("is fizz = {}, is buzz {}".format(is_fizz, is_buzz))
 
 # TODO: Compare the number the user gave with the different
 # FizzBuzz conditions.

@@ -23,12 +23,15 @@ while current_oven_temp < 350:
 def total_and_average():
     # Solution 2 here
     numbers = []
-
-
-
-
-
-
+    condition = True
+    while condition:
+        user = input("Enter a number: (press 'q' to quit) ")
+        if user == 'q'.lower():
+            break
+        numbers.append(float(user))
+    print("The list of numbers is: {}".format(numbers))
+    print("The sum of the numbers is: {}".format(sum(numbers)))
+    print("The average of the numbers is: {}".format(sum(numbers) / len(numbers)))
 
 total_and_average()
 
@@ -39,5 +42,10 @@ total_and_average()
 # Break out of the loop when current is equal to 101.
 
 current = 1
-
+divisible_3 = current % 3 == 0 # This value evaluates to false as 0 is falsey
+divisible_5 = current % 5 == 0
 # Solution 3 here
+while current < 101:
+    if not current % 3 or current % 5 == 0:
+        print("current is: {}".format(current))
+    current += 1
