@@ -26,11 +26,16 @@ second_window.geometry("%dx%d+%d+%d" % (second_window_width, second_window_heigh
 
 # Labels in a window,
 window_1_label = Label(window, text = 'Window 1 label', font='Broadway 18 bold italic', width=30) # This method builds the label object, and changes the font type, font size, bold and italic. The width is in text units, so the width is based on how many text characters can fit in the width (box)
-window_1_label_2 = Label(window, text='Line one text\nLine two text\nLine three text', borderwidth=2, relief='solid') # Label with multiple lines of text, borderwidth of 3 and a solid border
+window_1_label_2 = Label(window, text='Line one text\nLine two text\nLine three text', borderwidth=2, relief='solid', padx=20, pady=20, justify=LEFT) # Label with multiple lines of text, borderwidth of 3 and a solid border, and padding in the x and y direction with padx and pady, justify is set to LEFT (must be uppercase)
 window_2_label = Label(second_window, text = 'Window 2 label', background='black',foreground='white', font='Broadway') # same as above line but setting the background colour and font colour
-window_2_label_2 = Label(second_window, text = 'window 2 label 2')
+window_2_label_2 = Label(second_window, text = 'window 2 label 2', height=4, width=20, anchor='nw') # setting the position of the label text using anchor to be set in the northwest of the label, if we dont use anchor center will be the default
+# To display the labels .pack(), lines 33-36
 window_1_label.pack() # this method will display the labels
 window_1_label_2.pack()
 window_2_label.pack()
+window_2_label_2.pack()
+
+window_1_label['text'] = 'Label one has now been changed' # dynamically changing an option after packing using its key value pair, text of label has been altered
+
 
 window.mainloop() # is the loop for the program that is waiting for user input (fetch/execute cycle)
