@@ -22,7 +22,7 @@ label_one['text'] = 'Hello World Now!' # change text key after the label has bee
 window_two = Tk()
 window_two.title('Window two')
 window_two.geometry("400x200+100+400")
-str_var = StringVar() # creates a string variable object that can be attached (line 34) and set using .set() (line 35)
+str_var = StringVar() # creates a string variable object that can be attached (line 34) and set using .set() (line 36)
 label_two = Label(window_two,
                   border=10,
                   relief='solid',
