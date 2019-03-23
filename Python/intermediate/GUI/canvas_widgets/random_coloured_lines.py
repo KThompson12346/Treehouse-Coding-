@@ -8,6 +8,9 @@ def random_colour_code():
         colour_code = colour_code + choice(hex_chars)
     return colour_code
 
+def random_colour_code_fstr():
+    return f'#{randint(0, 0xffffff) :06x}' # 0xffffff, 0x specifies that the number is going to be a hexidecimal number, :06x says that it wants the hexidecimal number to be 6 values, randint(0, 0xffffff) returns a random number between 0-10680625 (python ignores 0xffffff) but returns it in denary but we want it in hexidecimal so :06x converts it back to a hexidecimal number
+    
 window = Tk()
 canvas = Canvas(window, width=500, height=500, bg='white')
 canvas.grid(row=0, column=0)
