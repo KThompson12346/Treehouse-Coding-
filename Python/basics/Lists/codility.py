@@ -24,10 +24,10 @@ def solution(A):
             return i # i is returned, i.e. the missing number
     return len(A) + 1 # the last index +1 is returned if end of list is met
 
+# LIST COMPREHENSION SOLUTION
+# def solution(A):
+#     return [x for x in range(1, len(A) + 1) if x not in A]
 
-
-
-
-l = [1, 3, 6, 4, 1, 2, 5]
+l = [1, 3, 6, 4, 1, 2]
 
 print(solution(l))
